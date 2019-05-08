@@ -1,0 +1,12 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ficheproduits/([A-Za-z0-9-\s/%&]+)/([A-Za-z0-9-\s/%&]+)/([A-Za-z0-9-\s/%&]+)$   index.php?c=Welcome&m=ficheproduits&id=$1&sortie=$2&info=$3 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^allSports/([A-Za-z0-9-\s/%&]+)$   index.php?c=Welcome&m=allSports&cat=$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^allArticle/$   index.php?c=Welcome&m=allArticle [L]
