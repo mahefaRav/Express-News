@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['base_url'] = 'http://localhost:81/ITU/ExpressNews/';
-//
+// http://localhost:81/ITU/ExpressNews/
 // http://mahefa.alwaysdata.net/
 
 /*

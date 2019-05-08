@@ -29,4 +29,30 @@ class Modele extends CI_Model
         $ret = $resultat->row_array();
         return $ret;
     }
+
+    public function findAllArticle()
+    {
+        $sql = "SELECT * from article";
+        $resultat = $this->db->query($sql);
+        $ret = $resultat->result_array();
+        return $ret;
+    }
+
+    public function addArticle($data)
+    {
+        $this->db->insert('article',$data);
+    }
+
+    public function updateArticle($id, $data)
+    {
+        $this->db->where('idarticle', $id);
+        $this->db->update('article', $data);
+    }
+
+    public function deleteArticle($id)
+    {
+        $this->db->where('idarticle', $id);
+        $this->db->delete('article', array('idarticle' => $id));
+    }
+
 }
